@@ -1,0 +1,482 @@
+:root {
+    --navy: #102a43;
+    --gold: #b79b38;
+    --paper: #faf7ec;
+    --ink: #252525;
+    --line: rgba(183, 155, 56, 0.28);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Cormorant Garamond", "Noto Serif TC", serif;
+
+    background:
+        linear-gradient(
+            rgba(250, 247, 236, 0.88),
+            rgba(250, 247, 236, 0.88)
+        ),
+        url("images/temple-stone-light.png");
+
+    background-repeat: repeat;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    padding: 24px 32px 70px;
+
+    background: var(--navy);
+    color: var(--gold);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.living-water {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-style: italic;
+    line-height: 0.85;
+}
+
+.version {
+    padding-top: 8px;
+
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+.hero-title {
+    margin: 12px 0 0;
+
+    font-size: clamp(4rem, 11vw, 10rem);
+    font-weight: 400;
+    line-height: 0.8;
+    letter-spacing: -0.055em;
+
+    white-space: nowrap;
+}
+
+.hero-scripture {
+    width: 100%;
+    max-width: 820px;
+
+    margin: auto;
+    padding: 90px 20px 35px;
+
+    text-align: center;
+}
+
+.verse-en {
+    margin: 0;
+
+    font-size: clamp(1.9rem, 3vw, 3rem);
+    font-style: italic;
+    line-height: 1.15;
+}
+
+.reference-en {
+    margin: 22px 0 30px;
+
+    font-size: 1.05rem;
+    font-style: italic;
+}
+
+.verse-cn {
+    margin: 0;
+
+    font-family: "Noto Serif TC", serif;
+    font-size: clamp(1rem, 1.7vw, 1.35rem);
+    line-height: 1.9;
+}
+
+.reference-cn {
+    margin: 12px 0 0;
+
+    font-family: "Noto Serif TC", serif;
+    font-size: 0.88rem;
+
+    opacity: 0.78;
+}
+
+.verse-ref {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+}
+
+
+/* JERUSALEM WALL */
+
+.city-wall {
+    height: 360px;
+
+    background:
+        var(--navy)
+        url("images/jerusalem-wall.png")
+        center bottom / cover
+        no-repeat;
+
+    overflow: hidden;
+}
+
+.wall-line {
+    display: none;
+}
+
+
+/* PRODUCT INTRO */
+
+.product-intro {
+    min-height: 82vh;
+    padding: 120px 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.workflow {
+    margin: 0 0 38px;
+
+    color: var(--gold);
+
+    font-size: 0.95rem;
+    letter-spacing: 0.22em;
+}
+
+.workflow span {
+    margin: 0 0.7em;
+}
+
+.product-intro h2 {
+    margin: 0 0 30px;
+
+    font-size: clamp(4rem, 8vw, 7.5rem);
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.intro-copy {
+    max-width: 760px;
+
+    margin: 0 0 48px;
+
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.2;
+}
+
+.download-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.download-button:hover {
+    background: var(--gold);
+    color: var(--paper);
+}
+
+.platform {
+    margin: 18px 0 0;
+
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+
+    opacity: 0.65;
+}
+
+
+/* APPLICATION */
+
+.app-preview {
+    padding: 120px 6vw 150px;
+
+    border-top: 1px solid var(--line);
+}
+
+.section-number {
+    margin: 0 0 28px;
+
+    color: var(--gold);
+
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+}
+
+.app-preview h2 {
+    max-width: 900px;
+
+    margin: 0 0 70px;
+
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    font-weight: 400;
+    line-height: 0.92;
+}
+
+.screenshot-placeholder {
+    width: min(1100px, 100%);
+    aspect-ratio: 16 / 10;
+
+    margin: 0 auto;
+
+    border: 1px solid var(--line);
+
+    background: var(--navy);
+    color: var(--gold);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenshot-placeholder span {
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 1;
+}
+
+.screenshot-placeholder small {
+    margin-top: 16px;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+
+    opacity: 0.65;
+}
+
+
+/* PROCESS */
+
+.process {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.process-item {
+    min-height: 520px;
+
+    padding: 72px 5vw;
+}
+
+.process-item + .process-item {
+    border-left: 1px solid var(--line);
+}
+
+.process-item h3 {
+    margin: 0 0 34px;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.process-item p:last-child {
+    max-width: 400px;
+
+    margin: 0;
+
+    font-size: 1.35rem;
+    line-height: 1.55;
+}
+
+
+/* DOWNLOAD */
+
+.download-section {
+    min-height: 82vh;
+    padding: 120px 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.download-section h2 {
+    margin: 0 0 30px;
+
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 400;
+    line-height: 0.92;
+}
+
+.download-section > p:not(.section-number) {
+    margin: 0 0 42px;
+
+    font-size: 1.4rem;
+}
+
+
+/* FOOTER */
+
+.footer {
+    min-height: 68vh;
+    padding: 100px 32px 48px;
+
+    background: var(--navy);
+    color: var(--gold);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.footer-scripture {
+    margin: 0;
+
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 400;
+    line-height: 0.88;
+}
+
+.footer-reference {
+    margin: 30px 0 68px;
+
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 34px;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-note {
+    margin: 76px 0 0;
+
+    font-size: 0.82rem;
+
+    opacity: 0.65;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 100svh;
+        padding: 20px 18px 48px;
+    }
+
+    .hero-title {
+        white-space: normal;
+
+        font-size: 18vw;
+        line-height: 0.82;
+    }
+
+    .hero-scripture {
+        padding: 70px 10px 30px;
+    }
+
+    .city-wall {
+        height: 220px;
+    }
+
+    .product-intro {
+        min-height: auto;
+        padding: 90px 24px;
+    }
+
+    .workflow {
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+    }
+
+    .workflow span {
+        margin: 0 0.3em;
+    }
+
+    .app-preview {
+        padding: 90px 24px;
+    }
+
+    .app-preview h2 {
+        margin-bottom: 50px;
+    }
+
+    .process {
+        grid-template-columns: 1fr;
+    }
+
+    .process-item {
+        min-height: auto;
+        padding: 70px 30px;
+    }
+
+    .process-item + .process-item {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+
+    .download-section {
+        min-height: auto;
+        padding: 100px 24px;
+    }
+
+    .footer {
+        min-height: 60vh;
+        padding: 90px 24px 45px;
+    }
+
+    .footer-links {
+        gap: 24px;
+    }
+}
