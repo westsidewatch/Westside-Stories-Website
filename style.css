@@ -133,7 +133,7 @@ a {
     background:
         var(--navy)
         url("images/jerusalem-wall.png")
-        center bottom / cover
+        center bottom / auto 100%
         no-repeat;
 
     overflow: hidden;
