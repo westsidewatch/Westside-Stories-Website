@@ -128,15 +128,21 @@ a {
 /* JERUSALEM WALL */
 
 .city-wall {
-    height: 360px;
+    height: 100px;
 
     background:
         var(--navy)
         url("images/jerusalem-wall.png")
-        center bottom / auto 100%
+        center bottom / 100% auto
         no-repeat;
 
     overflow: hidden;
+}
+
+.city-wall img {
+    display: block;
+    height: 95px;
+    width: auto;
 }
 
 .wall-line {
